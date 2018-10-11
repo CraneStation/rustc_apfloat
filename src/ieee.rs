@@ -1823,7 +1823,7 @@ impl<S: Semantics> IeeeFloat<S> {
             if first_sig_digit - dot - 1 > i16::max_value() as _ {
                 panic!("Failed to convert to ExpInt")
             } else {
-                -((dot - first_sig_digit) as ExpInt)
+                -((first_sig_digit - dot - 1) as ExpInt)
             }
         };
         let exp_adjustment = exp_adjustment
