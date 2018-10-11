@@ -1,7 +1,7 @@
 [package]
 authors = ["The Rust Project Developers"]
 name = "rustc_apfloat"
-version = "0.1.2"
+version = "0.1.3"
 description = "rustc_apfloat ripped out of rustc_private modified to support compiling on stable."
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/CraneStation/rustc_apfloat"
