@@ -1,6 +1,8 @@
 rustc\_apfloat
 ==============
 
+![minimum rustc 1.26](https://img.shields.io/badge/rustc-1.26+-red.svg)
+
 This is Rust Project's [rustc\_apfloat library], extracted into a standalone
 crate, as suggested in [#43554].
 
