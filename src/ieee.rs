@@ -2320,7 +2320,7 @@ mod sig {
 
     /// One, not zero, based MSB. That is, returns 0 for a zeroed significand.
     pub(super) fn omsb(limbs: &[Limb]) -> usize {
-        limbs.iter().enumerate().rfind(|(_, &limb)| limb != 0).map_or(0,
+        limbs.iter().enumerate().rev().find(|(_, &limb)| limb != 0).map_or(0,
             |(i, limb)| (i + 1) * LIMB_BITS - limb.leading_zeros() as usize)
     }
 

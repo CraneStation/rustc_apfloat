@@ -1,0 +1,20 @@
+# Travis CI script. See https://travis-ci.org/ for more info.
+
+language: rust
+rust:
+    - stable
+    - 1.26.2
+    - beta
+    - nightly
+matrix:
+    allow_failures:
+        # We try to be compatible with beta and nightly, but they occasionally
+        # fail, so we don't allow them to hold up people using stable.
+        - rust: beta
+        - rust: nightly
+    # Similarly, we don't need to hold up people using stable while we wait
+    # for the results which may fail.
+    fast_finish: true
+dist: trusty
+sudo: false
+cache: cargo
