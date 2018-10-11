@@ -1,0 +1,14 @@
+[package]
+authors = ["The Rust Project Developers"]
+name = "rustc_apfloat"
+version = "0.1.1"
+description = "rustc_apfloat ripped out of rustc_private modified to support compiling on stable."
+license = "MIT"
+repository = "https://github.com/CraneStation/rustc_apfloat"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+bitflags = "1.0"
